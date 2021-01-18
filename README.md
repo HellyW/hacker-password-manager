@@ -16,7 +16,20 @@ it is not a completely open source project. It allows individuals to download fo
 
 最终版本正在测试，即将开放内测...
 
+### 计划表
+
+> 预计1月20日  开放小程序体验
+
+> 预计1月21日前  整理好文档类说明
+
+> 预计1月23日前  完成内测版本问题修复，并正式上线
+
+> 预计1月25日前  整理好代码类文件并同步仓库
+
+
 ## 体验
+
+暂时无法体验，建议先加收藏哦~~
 
 <img src="screenshots/gh_72a49c29672c_1280.jpg" width="100px" height="100px" />
 
