@@ -35,6 +35,23 @@ it is not a completely open source project. It allows individuals to download fo
 Hacker密码更多的是一次尝试和实践，旨在用一种新的形式来探索密码保护。同时也希望通过开源透明的方式给更多有密码存储需要的用户一个值得信赖的选择。
 
 
+## 项目结构
+
+> 更新中
+
+```
+
+.
+├── [2.1K]  README.md                             
+├── [ 128]  docs                                   - 文档说明
+│   ├── [2.7K]  qrRecoverykey.md                   - 备份密钥
+│   └── [2.8K]  qrkey.md                           - 密钥二维码
+└── [ 128]  screenshots                   
+    └── [257K]  gh_72a49c29672c_1280.jpg
+
+
+```
+
 ## 体验
 
 暂时无法体验，建议先加收藏哦~~
