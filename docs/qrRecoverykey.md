@@ -27,8 +27,6 @@
 
 4. 请求服务端生成恢复密钥串合法识别码`qr_recovery_key_auth_code`和恢复密钥串标记`qr_recovery_key_auth_pass`
 
-> 调用`创建恢复密钥串合法识别码`接口，`qr_recovery_key_auth_pass`用于后续获取`qr_recovery_key_auth_code`解密恢复二维码密钥串`qr_key`
-
 5. 对以上参数`qr_recovery_key_auth_code`MD5加密输出HEX(大写)形成`qr_crypto_recovery_key_b`
 
 6. 使用`qr_crypto_recovery_key_b`和`qr_recovery_crypto_vi`将二维码密钥串`qr_key`进行AES加密输出HEX(大写)得到`qr_decrypt_key`
@@ -68,8 +66,6 @@
 ```
 
 4. 将获取到`recoveryPass`通过接口请求获取`qr_recovery_key_auth_code`
-
-> 调用`获取恢复密钥串合法识别码`接口
 
 5. 将获取的`qr_recovery_key_auth_code`MD5加密输出HEX(大写)形成`qr_crypto_recovery_key_b`
 
