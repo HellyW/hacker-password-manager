@@ -6,6 +6,8 @@
 
 it is not a completely open source project. It allows individuals to download for learning, communication and personal deployment. not be used for commercial purposes, registered trademarks and patent applications. Fork and modification are allowed. Applications derived from this project must be open source.
 
+<hr />
+
 ## Hacker密码
 
 该项目将开源所有的前端和服务端代码、加解密流程、结构设计。
@@ -13,4 +15,5 @@ it is not a completely open source project. It allows individuals to download fo
 所有代码及设计逻辑正在整理中，即将上传....
 
 最终版本正在测试，即将开放内测...
+
 
