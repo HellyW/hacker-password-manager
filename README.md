@@ -16,4 +16,24 @@ it is not a completely open source project. It allows individuals to download fo
 
 最终版本正在测试，即将开放内测...
 
+## 体验
+
+<img src="screenshots/gh_72a49c29672c_1280.jpg" style="width: 120px; height: 120px" />
+
+`微信扫码体验`
+
+<hr />
+
+## 如何反馈您的问题
+
+#### 开发者
+
+> 如果您有关于项目上的漏洞、程序运行问题。 请在此仓库下提issue [ https://github.com/wahao/hacker-password-manager/issues ] 即可
+
+#### 用户
+
+> 您可以通过官方社区[ https://support.qq.com/products/137031 ] 进行反馈。 
+
+
+
 
