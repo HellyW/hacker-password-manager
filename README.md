@@ -18,7 +18,7 @@ it is not a completely open source project. It allows individuals to download fo
 
 ## 体验
 
-<img src="screenshots/gh_72a49c29672c_1280.jpg" style="width: 120px; height: 120px" />
+<img src="screenshots/gh_72a49c29672c_1280.jpg" width="100px" height="100px" />
 
 `微信扫码体验`
 
