@@ -52,6 +52,10 @@ Hacker密码更多的是一次尝试和实践，旨在用一种新的形式来�
 
 ```
 
+## 加密逻辑（简图）
+
+<img src="docs/encryptionProcess.png" width="100%">
+
 ## 体验
 
 暂时无法体验，建议先加收藏哦~~
