@@ -1,0 +1,51 @@
+/* components/accountCategory/index.wxss */
+@import "/theme.wxss";
+
+.account-category{
+	width: 100%;
+}
+
+.account-category .container{
+	max-height: 600rpx;
+	box-sizing: border-box;
+	padding: 20rpx;
+}
+
+
+.account-category .category{
+	box-sizing: border-box;
+	padding: 20rpx;
+	margin: 20rpx 0;
+	display: flex;
+	display: -webkit-flex;
+}
+
+.account-category .category.choose{
+	border: 1rpx solid #67D8EF;
+}
+
+.category .icon{
+	display: block;
+	width: 80rpx;
+	height: 80rpx;
+	margin: 10rpx auto;
+}
+
+.category .detail{
+	width: 100%;
+	flex: 1;
+	padding: 20rpx;
+}
+
+
+.buttons{
+	display: flex;
+	display: -webkit-flex;
+}
+
+.buttons .button{
+	flex: 1;
+	margin: 0 10rpx;
+}
+
+

@@ -1,0 +1,17 @@
+/* components/navigator/index.wxss */
+@import "/theme.wxss";
+
+.com-navigator{
+  display: flex;
+  display: -webkit-flex;
+  padding: 20rpx 30rpx;
+}
+
+.com-navigator .navigator-information{
+  flex: 1;
+  width: 100%;
+}
+
+.com-navigator .icon{
+  margin: 20rpx;
+}

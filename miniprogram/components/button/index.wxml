@@ -1,0 +1,17 @@
+<!--components/button/index.wxml-->
+<view class="quasiphysical-wind-card com-button {{touching || disabled ? 'concave' : ''}}"
+	bindtouchstart="touchStartEvent"
+	bindtouchend="touchEndEvent"
+	bindtouchcancel="touchEndEvent"
+>
+  	<button
+  		disabled="{{disabled || loading}}"
+  		open-type="{{openType}}"
+  		form-type="{{formType}}"
+  		bindgetuserinfo="getuserinfoEvent"
+  		></button>
+	<icon wx:if="{{icon || loading}}" class="icon {{loading ? 'loading' : ''}}" icon="{{loading ? 'refresh' : icon}}" size="{{size}}"></icon>
+	<h-text class="label">
+		<slot></slot>
+	</h-text>
+</view>

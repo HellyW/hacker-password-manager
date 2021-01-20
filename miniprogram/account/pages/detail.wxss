@@ -1,0 +1,36 @@
+/* account/pages/detail.wxss */
+@import "/theme.wxss";
+.category{
+	width: 100%;
+	margin: 10rpx auto;
+	box-sizing: border-box;
+	padding: 30rpx;
+	text-align: center;
+}
+
+.category .icon{
+	display: block;
+	width: 120rpx;
+	height: 120rpx;
+	margin: 10rpx auto;
+}
+
+.buttons{
+	display: flex;
+	display: -webkit-flex;
+}
+
+.account-info, .button{
+	display: block;
+	flex: 1;
+	margin: 20rpx auto;
+	width: 100%;
+}
+
+.buttons .button:first-child{
+	margin: 0rpx 30rpx 0 0;
+}
+
+.buttons .button:last-child{
+	margin: 0rpx 0 0 30rpx;
+}

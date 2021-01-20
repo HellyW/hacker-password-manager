@@ -1,0 +1,5 @@
+<!--components/empty/index.wxml-->
+<view class="com-empty">
+	<image class="icon" src="./source/no-data.png" mode="scaleToFill"></image>
+	<h-text>{{tips}}</h-text>
+</view>

@@ -1,0 +1,10 @@
+/* category/pages/apply.wxss */
+.apply-form{
+  display: block;
+  margin: 0 auto;
+}
+
+.apply-form .input{
+  display: block;
+  margin: 20rpx 0;
+}

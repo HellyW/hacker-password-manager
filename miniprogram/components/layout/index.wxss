@@ -1,0 +1,12 @@
+/* components/layout/index.wxss */
+@import "/theme.wxss";
+.com-layout{
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.com-layout .content{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20rpx;
+}

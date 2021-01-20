@@ -1,0 +1,14 @@
+/* components/icon/index.wxss */
+
+.com-icon{
+}
+
+.com-icon.primary{
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.com-icon image{
+	width: 100%;
+	height: 100%;
+}

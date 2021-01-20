@@ -1,0 +1,51 @@
+/* components/input/index.wxss */
+@import "/theme.wxss";
+
+.com-input{
+	box-sizing: border-box;
+	padding: 30rpx;
+}
+
+.com-input .upload{
+	width: 120rpx;
+	height: 120rpx;
+	margin: 20rpx 0 5rpx;
+}
+
+.upload image{
+	width: 50%;
+	height: 50%;
+	margin: 25%;
+}
+
+.com-input input{
+	width: 100%;
+	margin: 20rpx 0 5rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	box-sizing: border-box;
+	padding: 0 0 0 20rpx;
+	font-size: 25rpx;
+}
+
+input.hidden{
+	width: 0;
+	height: 0;
+	min-height: 0;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	position: relative;
+	top: -30rpx;
+	left: 0;
+	z-index: -1;
+}
+
+.fixed-button{
+	position: fixed;
+	width: 100%;
+	height: 200rpx;
+	left: 0;
+	bottom: 30rpx;
+	z-index: 9;
+}

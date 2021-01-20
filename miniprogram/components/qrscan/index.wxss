@@ -1,0 +1,30 @@
+/* components/qrscan/index.wxss */
+@import "/theme.wxss";
+
+.buttons{
+	display: flex;
+	display: -webkit-flex;
+}
+
+.buttons .button{
+	flex: 1;
+	margin: 0 10rpx;
+}
+
+.qrcode{
+	margin: 30rpx auto;
+}
+
+.qrcode camera{
+	width: 300rpx;
+	height: 300rpx;
+	margin: 0 auto;
+}
+
+.qrcode .tips{
+	width: 100%;
+	text-align: center;
+	font-size: 22rpx;
+	margin: 10rpx auto;
+	color: #282923;
+}

@@ -1,0 +1,32 @@
+<!--account/pages/share.wxml-->
+<layout title="">
+  <half-dialog
+    wx:if="{{!decryptObj}}"
+    title="查看内容"
+    describe="分享的内容受密码保护，请先完成验证"
+    modal="{{true}}"
+    bindclose="toHome"
+  >
+    <form bindsubmit="decryptAccount">
+      <h-input class="input" label="访问码" describe="请先输入合法有效的访问码" name="code" maxlength="6" type="number"></h-input>
+      <h-button class="input" icon="fingerprint" loading="{{decrypting}}" form-type="submit">立即查看</h-button>
+    </form>
+  </half-dialog>
+  <view wx:else>
+    <view wx:if="{{decryptObj.name && decryptObj.name.length !== 0}}" class="account-info">
+      <clipboard-card title="别名" value="{{decryptObj.name}}"></clipboard-card>
+    </view>
+    <view wx:if="{{decryptObj.account && decryptObj.account.length !== 0}}" class="account-info">
+      <clipboard-card title="账号" value="{{decryptObj.account}}"></clipboard-card>
+    </view>
+    <view wx:if="{{decryptObj.password && decryptObj.password.length !== 0}}" class="account-info">
+      <clipboard-card title="密码" describe="已做解密处理，以下为明文信息" value="{{decryptObj.password}}"></clipboard-card>
+    </view>
+    <view wx:for="{{decryptObj.safeInfo}}" wx:for-item="safeInfo" class="account-info">
+      <clipboard-card title="{{safeInfo.key}}" describe="已做解密处理，以下为明文信息" value="{{safeInfo.value}}"></clipboard-card>
+    </view>
+    <view class="account-info">
+      <h-button icon="save" bind:tap="saveShareAccount">转存账号</h-button>
+    </view>
+  </view>
+</layout>

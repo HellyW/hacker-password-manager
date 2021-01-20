@@ -1,0 +1,20 @@
+<!--components/half-dialog/index.wxml-->
+<view class="com-half-dialog {{modal ? 'modal' : ''}}" style="z-index: {{100 + zIndex}}">
+	<view class="quasiphysical-wind-card dialog {{modal ? '' : 'fixed-bottom'}}" style="bottom: {{bottom}}px">
+		<!-- 功能菜单 -->
+		<!-- 展示 标题  副标题  及关闭按钮 -->
+		<view class="header">
+			<view class="title">
+				<h-text type="main">{{title}}</h-text>
+				<h-text type="sub">{{describe}}</h-text>
+			</view>
+			<view wx:if="{{showClose}}" class="close">
+				<h-button icon="close" bind:tap="closeEvent"></h-button>
+			</view>
+		</view>
+		<!-- 主要显示区域 -->
+		<view class="content">
+			<slot></slot>
+		</view>
+	</view>
+</view>

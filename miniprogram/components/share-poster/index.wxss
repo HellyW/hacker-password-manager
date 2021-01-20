@@ -1,0 +1,11 @@
+/* components/share-poster/index.wxss */
+
+.input{
+  display: block;
+  margin: 20rpx auto;
+}
+
+.poster-cocntainer{
+	width: 500rpx;
+	margin: 30rpx auto 0;
+}

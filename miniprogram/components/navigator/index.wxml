@@ -1,0 +1,8 @@
+<!--components/navigator/index.wxml-->
+<view class="com-navigator quasiphysical-wind-card" bindtap="tapEvent">
+  <view class="navigator-information">
+    <h-text wx:if="{{label}}" class="label">{{label}}</h-text>
+    <h-text wx:if="{{describe}}" class="describe" type="sub">{{describe}}</h-text>
+  </view>
+  <icon class="icon" wx:if="{{icon}}" icon="{{icon}}"></icon>
+</view>

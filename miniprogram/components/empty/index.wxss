@@ -1,0 +1,13 @@
+/* components/empty/index.wxss */
+.com-empty{
+	width: 90%;
+	margin: 30rpx auto;
+	text-align: center;
+}
+
+.com-empty .icon{
+	display: block;
+	width: 400rpx;
+	height: 400rpx;
+	margin: 30rpx auto;
+}

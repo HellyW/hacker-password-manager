@@ -1,0 +1,27 @@
+<!--components/accountCategory/index.wxml-->
+<half-dialog
+  class="account-category"
+  title="账号类别"
+  describe="请选择当前账号所属类别"
+  bind:close="closeEvent"
+>
+	<scroll-view scroll-y="{{true}}" class="container" bindscrolltolower="getCategories">
+		<view
+			class="category quasiphysical-wind-card {{selected && selected.id === category.id ? 'choose concave' : ''}}"
+			wx:for="{{categories}}"
+			wx:for-item="category"
+			data-category="{{category}}"
+			bind:tap="chooseEvent"
+		>
+			<image  class="icon" src="{{category.icon}}" mode="scaleToFill"></image>
+			<view class="detail">
+				<h-text type="main">{{category.name}}</h-text>
+				<h-text type="sub">{{category.website}}</h-text>
+			</view>
+		</view>
+	</scroll-view>
+	<view class="buttons">
+		<h-button class="button" icon="add" bind:tap="apply">申请</h-button>
+		<h-button class="button" icon="save" bind:tap="save">确定</h-button>
+	</view>
+</half-dialog>

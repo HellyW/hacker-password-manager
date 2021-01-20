@@ -1,0 +1,103 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": true,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.1",
+  "appid": "wxca2479a77dde7df4",
+  "projectname": "hacker%E5%AF%86%E7%A0%81",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "category/pages/apply",
+          "pathName": "category/pages/apply",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/my",
+          "pathName": "pages/home/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "tools/pages/recovery",
+          "pathName": "tools/pages/recovery",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "account/pages/share",
+          "pathName": "account/pages/share",
+          "query": "scene=5ffea1d60b0ef61fc41c771d",
+          "scene": null
+        },
+        {
+          "name": "pages/home/list",
+          "pathName": "pages/home/list",
+          "query": "scene=5ffe63d128102616b02a9587",
+          "scene": null
+        },
+        {
+          "name": "app/pages/about",
+          "pathName": "app/pages/about",
+          "query": "scene=5ffea1d60b0ef61fc41c771d",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

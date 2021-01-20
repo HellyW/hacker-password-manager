@@ -1,0 +1,9 @@
+<!--components/clipboard-card/index.wxml-->
+<view class="com-clipboard-card quasiphysical-wind-card">
+	<icon class="copy-icon" icon="copy" bind:tap="copyEvent"></icon>
+	<h-text>{{title}}</h-text>
+	<h-text type="sub">{{describe}}</h-text>
+	<view class="value quasiphysical-wind-card concave">
+		<h-text>{{value}}</h-text>
+	</view>
+</view>

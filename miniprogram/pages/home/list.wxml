@@ -1,0 +1,22 @@
+<!--pages/home/list.wxml-->
+<layout title="" hideHomeButton="{{true}}">
+	<empty wx:if="{{!accounts || accounts.length === 0}}" class="empty" tips="点击“+”，积累信任~~"></empty>
+	<view class="accounts-container">
+		<view
+			class="account quasiphysical-wind-card"
+			wx:for="{{accounts}}"
+			wx:for-item="account"
+			wx:key="id"
+			data-id="{{account.id}}"
+			data-qrkey="{{account.qrkey}}"
+			bind:tap="getDetail"
+			>
+			<network-image class="category-icon" preview="{{false}}" src="{{account.category.icon}}"></network-image>
+			<h-text type="main">{{account.name}}</h-text>
+			<h-text type="sub">{{account.createAt}}</h-text>
+		</view>
+	</view>
+</layout>
+
+
+

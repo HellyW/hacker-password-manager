@@ -1,0 +1,55 @@
+/* components/button/index.wxss */
+@import "/theme.wxss";
+
+.com-button{
+	display: inline-block;
+	padding: 20rpx;
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	/*以保证上下之间的效果可以显示出来*/
+	margin: 18rpx 0;
+}
+
+.com-button .icon{
+	margin: 0 10rpx;
+}
+
+.icon.loading{
+	animation: rotating .6s infinite;
+}
+
+.com-button button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+@keyframes rotating{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(180deg);
+	}
+}
+
+@-webkit-keyframes rotating{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(180deg);
+	}
+}

@@ -1,0 +1,9 @@
+<!--components/layout/index.wxml-->
+<view class="com-layout layout">
+	<!-- 全局的导航 -->
+	<navigation title="{{title}}" hideHomeButton="{{hideHomeButton}}"></navigation>
+	<!-- 主体内容 -->
+	<view class="content" >
+		<slot></slot>
+	</view>
+</view>

@@ -1,0 +1,22 @@
+/* custom-tab-bar/index.wxss */
+.com-tab-bar{
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	bottom: 30rpx;
+}
+
+.com-tab-bar .container{
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	display: -webkit-flex;
+}
+
+.com-tab-bar .container .tab-item{
+	flex: 1;
+	margin: 10rpx 20rpx;
+	display: inline-block;
+	padding: 20rpx;
+	text-align: center;
+}

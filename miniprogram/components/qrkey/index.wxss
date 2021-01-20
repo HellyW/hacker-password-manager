@@ -1,0 +1,18 @@
+/* components/qrkey/index.wxss */
+@import "/theme.wxss";
+
+.buttons{
+	display: flex;
+	display: -webkit-flex;
+}
+
+.buttons .button{
+	flex: 1;
+	margin: 0 10rpx;
+}
+
+.qrcode{
+	width: 500rpx;
+	height: 650rpx;
+	margin: 30rpx auto;
+}

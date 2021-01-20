@@ -1,0 +1,16 @@
+<!--components/qrkey/index.wxml-->
+<half-dialog
+  class="qrkey"
+  title="密钥二维码"
+  describe="用于本地加密敏感数据，丢失无法找回"
+  z-index="{{zIndex}}"
+  bind:close="closeEvent"
+>
+	<view class="qrcode">
+		<painter palette="{{paletteData}}" dancePalette="{{paletteData}}" widthPixels="1000" bind:imgOK="imageOkEvent"></painter>
+	</view>
+	<view class="buttons">
+		<h-button wx:if="{{!qrkey}}" class="button" icon="refresh" loading="{{refresh}}" bind:tap="getQrKey">刷新</h-button>
+		<h-button class="button" icon="save" disabled="{{!filepath}}" bind:tap="downloadImage">保存</h-button>
+	</view>
+</half-dialog>

@@ -1,0 +1,16 @@
+/* account/pages/share.wxss */
+form{
+  display: block;
+  padding: 30rpx 0;
+}
+
+.input{
+  margin: 20rpx auto;
+}
+
+.account-info{
+	display: block;
+	flex: 1;
+	margin: 20rpx auto;
+	width: 100%;
+}

@@ -1,0 +1,30 @@
+/* pages/home/my.wxss */
+@import "/theme.wxss";
+.avatar{
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  margin: 40rpx auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.applications{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.applications .application{
+  display: block;
+  margin: 30rpx 0;
+}
+
+.danger-tips{
+  padding: 10rpx 30rpx;
+}
+
+.danger-tips .button{
+  display: block;
+  margin: 30rpx auto 0;
+}

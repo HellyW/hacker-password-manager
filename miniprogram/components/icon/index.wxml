@@ -1,0 +1,4 @@
+<!--components/icon/index.wxml-->
+<view wx:if="{{icon && noError}}" class="com-icon {{size}}">
+	<image src="./sources/white/{{icon}}.png" mode="scaleToFill" binderror="loadErrorEvent"></image>
+</view>

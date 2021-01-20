@@ -1,0 +1,19 @@
+<!--custom-tab-bar/index.wxml-->
+<!-- 此处本需要使用 cover-view ； 但对于样式上存在真机不兼容。  目前先使用view  -->
+<view class="com-tab-bar">
+	<view class="container">
+		<h-button
+			wx:for="{{pages}}"
+			wx:for-item="page"
+			wx:key="index"
+			class="tab-item"
+			icon="{{page.icon}}"
+			data-path="{{page.path}}"
+			data-type="{{page.type}}"
+			data-selected="{{page.selected}}"
+			disabled="{{page.selected === selected}}"
+			catch:tap="switchTab"
+		>
+		</h-button>
+	</view>
+</view>

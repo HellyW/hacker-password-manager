@@ -1,0 +1,24 @@
+<!--account/pages/edit.wxml-->
+<layout title="编辑账号">
+  <form class="edit-form" bindsubmit="editAccount">
+    <!-- 基础信息 -->
+    <h-input class="input" label="类型" describe="选择账号类型，如果没有可以点击申请" disabled="{{true}}" value="{{ formData && formData.category && formData.category.name }}" placeholder="点击选择账号类型" bindtap="showCategoryMask"></h-input>
+    <h-input class="input" label="密钥" describe="密钥二维码将用于本地加密敏感数据" disabled="{{true}}" value="{{formData.key}}" placeholder="点击扫描密钥二维码" bindtap="showQrkeyMask"></h-input>
+    <h-input class="input" label="别名" data-key="name" bindinput="formdataInputEvent" describe="如 电脑开机密码、公众号密码、邮箱密码" value="{{formData.name}}" placeholder="请输入简单易识别的名称" name="name"></h-input>
+    <h-input class="input" label="账号" data-key="account" bindinput="formdataInputEvent" describe="该部分信息将被明文存储" placeholder="请输入账号" value="{{formData.account}}" name="account"></h-input>
+    <h-input class="input" type="password" data-key="password" bindinput="formdataInputEvent" label="密码" describe="该部分信息将被加密存储" value="{{formData.password}}" placeholder="请输入账号对应的密码" name="password"></h-input>
+    <!-- 扩展信息 -->
+    <view wx:if="{{formData.safeInfo && formData.safeInfo.length !== 0}}" class="extras-container">
+      <view class="extras-item" wx:for="{{formData.safeInfo}}" wx:for-item="safeInfo">
+        <h-input class="input" label="别名[key]" describe="下方加密内容的可识别名称；如APPID、域名等" placeholder="该部分信息将被明文存储" value="{{safeInfo.key}}" data-index="{{index}}" data-key="key" bindinput="inputSafeInfo"></h-input>
+        <h-input class="input" label="安全文本[value]" describe="请输入上方对应的加密信息" placeholder="该部分信息将被加密存储" value="{{safeInfo.value}}" data-index="{{index}}" data-key="value" bindinput="inputSafeInfo"></h-input>
+        <h-button class="input" icon="trash" data-index="{{index}}" bind:tap="removeCurrentOption">删除此项</h-button>
+      </view>
+    </view>
+    <h-button class="input" icon="add" bind:tap="addSafeInfoInput">添加其他加密信息</h-button>
+  	<h-button class="input" icon="save" form-type="submit" loading="{{adding}}">保存</h-button>
+  </form>
+  <qr-scan wx:if="{{qrkeyMask}}" bindclose="closeQrkeyMask" binderror="scanQrkeyErrorEvent" bindscan="scanQrkeyEvent"></qr-scan>
+  <account-category wx:if="{{categoryMask}}" bindclose="closeCategoryMask" bindselect="accountCategorySelectEvent"></account-category>
+</layout>
+

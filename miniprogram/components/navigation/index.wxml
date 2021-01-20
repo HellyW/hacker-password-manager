@@ -1,0 +1,15 @@
+<!--components/navigation/index.wxml-->
+<view class="com-navigation" style="height: {{height}}px">
+	<!-- 功能按钮 -->
+	<view class="navigation-button">
+		<!-- 返回按钮 -->
+		<h-button wx:if="{{pageCount > 1}}" icon="back" class="navigation-icon-button" bind:tap="backEvent"></h-button>
+		<!-- 首页按钮 -->
+		<h-button wx:elif="{{!hideHomeButton}}" icon="home" class="navigation-icon-button" bind:tap="relaunchEvent"></h-button>
+	</view>
+	<!-- 标题 -->
+	<view class="navigation-title">
+		<h-text wx:if="{{title}}">{{title}}</h-text>
+	</view>
+	
+</view>

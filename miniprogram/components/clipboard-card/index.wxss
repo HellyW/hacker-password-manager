@@ -1,0 +1,24 @@
+/* components/clipboard-card/index.wxss */
+@import "/theme.wxss";
+
+.com-clipboard-card{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30rpx;
+	position: relative;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.copy-icon{
+	position: absolute;
+	top: 30rpx;
+	right: 30rpx;
+}
+
+.value{
+	width: 80%;
+	padding: 20rpx 0;
+	margin: 30rpx auto;
+}

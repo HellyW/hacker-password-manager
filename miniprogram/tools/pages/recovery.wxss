@@ -1,0 +1,31 @@
+/* tools/pages/recovery.wxss */
+.fixed-bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.tips{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50rpx;
+}
+
+.tips .tip{
+  margin: 25rpx 0;
+}
+
+.fixed-bottom .button{
+  flex: 1;
+  width: 100%;
+  padding: 20rpx;
+}
+
+.qr-recovery-key{
+  max-height: 350rpx;
+  overflow-y: scroll;
+}

@@ -1,0 +1,13 @@
+/* components/text/index.wxss */
+@import "/theme.wxss";
+
+text.com-text{
+	display: inline-block;
+    letter-spacing: 1rpx;
+    padding: 5rpx;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+text.com-text.block{
+	display: block;
+}

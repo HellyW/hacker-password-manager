@@ -1,0 +1,25 @@
+/* pages/home/list.wxss */
+@import "/theme.wxss";
+.empty{
+	margin: 80rpx auto 0;
+}
+
+.accounts-container{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.account{
+	display: inline-block;
+	width: 46%;
+	margin: 10rpx 2%;
+	box-sizing: border-box;
+	padding: 30rpx;
+	text-align: center;
+}
+.account .category-icon{
+	display: inline-block;
+	width: 100rpx;
+	height: 100rpx;
+	margin: 10rpx 0;
+}

@@ -1,0 +1,6 @@
+<!--app/pages/about.wxml-->
+<layout title="reference">
+	<view class="references">
+		<h-navigator wx:for="{{references}}" wx:for-item="reference" class="reference" label="{{reference.name}}" describe="{{reference.describe}}" icon="archives"></h-navigator>
+	</view>
+</layout>

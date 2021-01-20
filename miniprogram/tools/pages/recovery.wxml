@@ -1,0 +1,63 @@
+<!--tools/pages/recovery.wxml-->
+<layout title="备份密钥">
+  <view class="tips">
+    <view class="tip">
+      <h-text>什么是备份密钥？</h-text>
+      <h-text type="sub">备份密钥是通过对称加密的算法将密钥二维码进行加密得到的一组字符串密文。</h-text>
+    </view>
+    <view class="tip">
+      <h-text>为什么需要备份密钥？</h-text>
+      <h-text type="sub">由于密钥二维码是本地生成，不在服务端存储。就导致了其丢失便无法找回，从而导致与之关联的账号信息无法使用。</h-text>
+      <h-text type="sub">而备份密钥是对密钥二维码的加密，是密钥二维码丢失的“后悔药”。在密钥二维码丢失的情况下帮助您找回的唯一方式。</h-text>
+    </view>
+    <view class="tip">
+      <h-text>备份密钥怎么存储？</h-text>
+      <h-text type="sub">备份密钥是对密钥二维码的加密，和密钥二维码一样重要，所以一定要慎重保管。建议存储至其他云端备忘录内。</h-text>
+    </view>
+    <view class="tip">
+      <h-text>备份密钥存储在其他云端设备上是否安全？</h-text>
+      <h-text type="sub">备份密钥加入了身份认证，即谁备份生成，谁才可以还原。</h-text>
+    </view>
+    <view class="tip">
+      <h-text>如何生成备份密钥和恢复密钥二维码呢？</h-text>
+      <h-text type="sub">生成备份密钥： 点击下方备份，扫描所需要备份的密钥二维码。复制生成的备份密钥即可</h-text>
+      <h-text type="sub">恢复密钥二维码： 复制您的备份密钥至剪贴板，并点击下方还原。 系统将进行解析并输出密钥二维码，点击保存即可。</h-text>
+    </view>
+
+  </view>
+  <view class="fixed-bottom">
+    <view class="button">
+      <h-button icon="copy" bindtap="showQrRecoveryScanMask">备份</h-button>
+    </view>
+    <view class="button">
+      <h-button icon="restore" bindtap="restore">还原</h-button>
+    </view>
+  </view>
+</layout>
+
+<qr-scan
+  wx:if="{{qrRecoveryScanMask}}"
+  showAddButton="{{false}}"
+  bindclose="closeQrRecoveryScanMask"
+  bindscan="getQrkeyEvent"
+>
+
+</qr-scan>
+
+<half-dialog
+  wx:if="{{qrRecoveryMask}}"
+  title="备份密钥"
+  describe="建议复制后，保存到本地文件。注意保管"
+  bindclose="closeQrRecoveryMask"
+>
+<view class="qr-recovery-key">
+  <h-text type="sub">{{qrRecoveryKey}}</h-text>
+</view>
+<h-button icon="copy" bindtap="copyQrRckey">复制到剪贴板</h-button>
+</half-dialog>
+
+<qr-key
+wx:if="{{qrKeyMask}}"
+qrkey="{{qrkey}}"
+bindclose="closeQrKeyMask"
+></qr-key>

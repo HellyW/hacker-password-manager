@@ -1,0 +1,16 @@
+<!--components/share-poster/index.wxml-->
+<half-dialog
+  title="分享账号"
+  describe="分享后，账号将会在网络传播。可能导致泄露风险！"
+  bindclose="closeEvent"
+>
+  <form wx:if="{{formMask}}" bindsubmit="createPoster">
+    <h-input class="input" label="别名" name="name" type="text" describe="用于帮助您标记分享的内容" placeholder="如：茶歇区WI-FI账号密码" adjust-position="{{false}}"></h-input>
+    <h-input class="input" label="访问码" name="code" type="number" describe="只有输入正确的访问码，才可以查看密码信息" placeholder="6位纯数字" maxlength="6" adjust-position="{{false}}"></h-input>
+    <h-button class="input" icon="share" form-type="submit">创建分享海报</h-button>
+  </form>
+  <view wx:else class="poster-cocntainer">
+	<painter palette="{{paletteData}}" dancePalette="{{paletteData}}" widthPixels="1000" bind:imgOK="imageOkEvent"></painter>
+	<h-button class="input" icon="save" disabled="{{!filepath}}" bind:tap="downloadImage">保存分享海报</h-button>
+  </view>
+</half-dialog>

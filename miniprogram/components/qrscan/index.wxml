@@ -1,0 +1,22 @@
+<!--components/qrscan/index.wxml-->
+<half-dialog
+  class="qrscan"
+  title="扫描密钥二维码"
+  describe="请将密钥二维码对准取景框"
+  bind:close="closeEvent"
+>
+
+	<view class="qrcode">
+		<camera mode="scanCode" resolution="high" frame-size="large" bindscancode="scanCodeSuccess"></camera>
+		<view
+		 wx:if="{{authCode}}"
+		 class="tips"
+		>{{tips}}</view>
+	</view>
+	<view class="buttons">
+		<h-button wx:if="{{showAddButton}}" class="button" icon="add" bind:tap="createKey">创建密钥</h-button>
+		<h-button class="button" icon="scan" bind:tap="scanCode">聚焦扫描</h-button>
+	</view>
+</half-dialog>
+
+<qr-key wx:if="{{qrKeyMask}}" z-index="1" bindclose="qrKeyMaskCloseEvent"></qr-key>

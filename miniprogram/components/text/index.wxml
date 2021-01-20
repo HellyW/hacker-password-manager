@@ -1,0 +1,4 @@
+<!--components/text/index.wxml-->
+<text class="com-text {{type}}-text {{block? 'block':''}}">
+	<slot></slot>
+</text>

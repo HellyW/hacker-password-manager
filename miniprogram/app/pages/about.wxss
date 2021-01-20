@@ -1,0 +1,10 @@
+/* app/pages/about.wxss */
+
+.references{
+	box-sizing: border-box;
+	padding: 30rpx;
+}
+
+.reference{
+	margin: 20rpx 10rpx;
+}

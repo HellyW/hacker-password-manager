@@ -1,0 +1,27 @@
+/* components/navigation/index.wxss */
+
+.com-navigation{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 60rpx 40rpx 30rpx 40rpx;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	background: #F0F2F6;
+}
+
+.navigation-button .navigation-icon-button{
+	display: inline-block;
+	margin: 0 10rpx;
+}
+
+.navigation-title{
+	flex: 1;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+}

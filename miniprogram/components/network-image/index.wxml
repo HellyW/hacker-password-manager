@@ -1,0 +1,3 @@
+<!--components/network-image/index.wxml-->
+<image wx:if="{{!imageError && src}}" class="com-network-image" src="{{host}}/{{src}}" mode="widthFix" binderror="errorEvent" bindtap="previewImage"></image>
+<image wx:else class="com-network-image" src="./sources/error.png" mode="widthFix"></image>

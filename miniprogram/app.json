@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/home/list",
+    "pages/home/my",
+    "pages/home/add"
+  ],
+  "subpackages": [
+    {
+      "root": "account",
+      "pages": [
+        "pages/edit",
+        "pages/detail",
+        "pages/share"
+      ]
+    },
+    {
+      "root": "category",
+      "pages": [
+        "pages/apply"
+      ]
+    },
+    {
+      "root": "app",
+      "pages": [
+        "pages/about"
+      ]
+    },
+    {
+      "root": "tools",
+      "pages": [
+        "pages/recovery"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/home/list",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/home/my",
+        "text": "更多"
+      }
+    ]
+  },
+  "usingComponents": {
+    "layout": "/components/layout/index",
+    "empty": "/components/empty/index",
+    "half-dialog": "/components/half-dialog/index",
+    "network-image": "/components/network-image/index",
+    "account-category": "/components/account-category/index",
+    "clipboard-card": "/components/clipboard-card/index",
+    "share-poster": "/components/share-poster/index",
+    "qr-key": "/components/qrkey/index",
+    "qr-scan": "/components/qrscan/index",
+    "icon": "/components/icon/index",
+    "h-navigator": "/components/navigator/index",
+    "h-button": "/components/button/index",
+    "h-input": "/components/input/index",
+    "h-text": "/components/text/index"
+  },
+  "plugins": {
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

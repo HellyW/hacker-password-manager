@@ -1,0 +1,47 @@
+<!--pages/home/my.wxml-->
+<layout title="" hideHomeButton="{{true}}">
+  <view class="avatar quasiphysical-wind-card">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="applications">
+    <h-navigator class="application" label="备份密钥" describe="专业配钥匙，请带上户口本随我来~~" icon="fingerprint" path="/tools/pages/recovery"></h-navigator>
+    <h-navigator class="application" label="交流社区" describe="好看的人早就发现了有趣的问题" icon="earth" bindclick="tucao"></h-navigator>
+    <h-navigator class="application" label="版本号" describe="{{version}}" icon="archives" path="/app/pages/about"></h-navigator>
+    <h-navigator class="application" label="彻底注销账号" describe="非退出，慎点。将完全清除与您相关的数据~" icon="boom" bindclick="showKillAllMask"></h-navigator>
+  </view>
+</layout>
+
+<half-dialog
+  wx:if="{{killAllMask}}"
+  title="危险操作警告"
+  describe="注销将删除与您账号相关的所有数据"
+  modal="{{true}}"
+  bindclose="closeKillAllMask"
+>
+  <view class="danger-tips">
+    <h-text>系统将自动清除以下和您相关的数据</h-text>
+    <h-text type="sub">账户信息，包括收集的头像、昵称</h-text>
+    <h-text type="sub">记录的全部账号信息</h-text>
+    <h-text type="sub">创建的所有本地密钥二维码的云端凭据</h-text>
+    <h-text type="sub">所有用于恢复密钥二维码的备份密钥云端凭据</h-text>
+    <h-text type="sub">分享的所有账号密码数据</h-text>
+    <h-text type="sub">申请的私有账号类型</h-text>
+    <h-button class="button" icon="trash" bindtap="removeAll">我已了解 确认注销</h-button>
+  </view>
+</half-dialog>
+
+<half-dialog
+  wx:if="{{exitMask}}"
+  title="退出应用"
+  describe="已删除与您相关的全部数据"
+  modal="{{true}}"
+  showClose="{{false}}"
+>
+  <view class="danger-tips">
+    <h-text>请点击下方关闭应用退出小程序， 如您再次进入系统将默认为您申请新的账户。</h-text>
+    <navigator target="miniProgram" open-type="exit">
+      <h-button class="button" icon="close">关闭应用</h-button>
+    </navigator>
+  </view>
+</half-dialog>
+

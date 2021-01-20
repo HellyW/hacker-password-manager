@@ -1,0 +1,53 @@
+<!--account/pages/detail.wxml-->
+<layout title="账号详情">
+	<view wx:if="{{account}}" class="account-detail">
+		<view wx:if="{{account.category}}" class="category quasiphysical-wind-card">
+			<network-image class="icon" src="{{account.category.icon}}"></network-image>
+			<h-text type="main">{{account.category.name}}</h-text>
+			<h-text type="sub">{{account.category.website}}</h-text>
+		</view>
+		<view class="account-info">
+			<clipboard-card  title="创建时间" value="{{account.createAt}}"></clipboard-card>
+		</view>
+		<view class="account-info">
+			<clipboard-card title="更新时间" value="{{account.updateAt}}"></clipboard-card>
+		</view>
+		<view class="account-info">
+			<clipboard-card title="绑定密钥" value="0x{{account.qrkey}}"></clipboard-card>
+		</view>
+		<view class="account-info">
+			<clipboard-card title="别名" value="{{account.name}}"></clipboard-card>
+		</view>
+		<view class="account-info">
+			<clipboard-card title="账号" value="{{account.account}}"></clipboard-card>
+		</view>
+		<view class="account-info">
+			<clipboard-card title="密码" describe="已做解密处理，以下为明文信息" value="{{account.password}}"></clipboard-card>
+		</view>
+		<view wx:for="{{account.safeInfo}}" wx:for-item="safeInfo" class="account-info">
+			<clipboard-card title="{{safeInfo.key}}" describe="已做解密处理，以下为明文信息" value="{{safeInfo.value}}"></clipboard-card>
+		</view>
+		<view class="buttons">
+			<h-button class="button" icon="trash" bind:tap="editAccount">修改账号</h-button>
+			<h-button class="button" icon="share" bind:tap="shareAccount">分享账号</h-button>
+		</view>
+		<h-button class="button" icon="trash" bind:tap="removeAccount">删除账号</h-button>
+		
+	</view>
+	<qr-scan
+		wx:if="{{qrScanMask}}"
+		auth-code="{{authCode}}"
+		show-add-button="{{false}}"
+		binderror="qrScanErrorEvent"
+		bindclose="qrScanCloseEvent"
+		bindscan="qrScanEvent"
+	></qr-scan>
+
+	<share-poster
+	 wx:if="{{shareposterMask}}"
+	 decodeStr="{{decodeStr}}"
+	 binderror="shareposterErrorEvent"
+	 bindclose="shareposterCloseEvent"
+	 ></share-poster>
+</layout>
+

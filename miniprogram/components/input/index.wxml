@@ -1,0 +1,25 @@
+<!--components/input/index.wxml-->
+<view class="com-input quasiphysical-wind-card">
+	<h-text wx:if="{{label}}" type="main" class="label">{{label}}</h-text>
+	<h-text wx:if="{{describe}}" type="sub" class="describe">{{describe}}</h-text>
+	<view wx:if="{{type === 'upload'}}" class="upload quasiphysical-wind-card">
+		<image src="{{value ? cutImage : './sources/upload.png'}}" bind:tap="loadLocalImage"></image>
+	</view>
+	<input
+		class="quasiphysical-wind-card {{disabled ? '' : 'concave'}} {{type === 'upload' ? 'hidden' : ''}}"
+		placeholder="{{placeholder}}"
+		type="{{type}}"
+		adjust-position="{{adjustPosition}}"
+		disabled="{{disabled}}"
+		value="{{value}}"
+		name="{{name}}"
+		maxlength="{{maxlength}}"
+		bindinput="inputEvent"
+	></input>
+</view>
+
+<image-cropper wx:if="{{type === 'upload' && originalImage}}" id="image-cropper" imgSrc="{{originalImage}}" max_width="800" max_height="800" img_width="{{screenWidth}}" disable_ratio="{{true}}"></image-cropper>
+
+<cover-view wx:if="{{type === 'upload' && originalImage}}" class="fixed-button">
+	<button bindtap="finCut">确认裁剪</button>
+</cover-view >

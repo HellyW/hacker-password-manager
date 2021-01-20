@@ -1,0 +1,5 @@
+/* components/network-image/index.wxss */
+.com-network-image{
+  display: inline-block;
+  width: 100%;
+}

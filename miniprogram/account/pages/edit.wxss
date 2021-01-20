@@ -1,0 +1,29 @@
+/* account/pages/edit.wxss */
+
+.edit-form{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30rpx;
+}
+
+.edit-form .input{
+	display: block;
+	margin: 25rpx 0;
+}
+
+.extras-container{
+	box-sizing: border-box;
+	padding: 10rpx;
+	border-radius: 10rpx;
+	margin: 0 auto;
+	border: 4rpx dotted #A6E22C;
+}
+
+.extras-container .extras-item{
+	box-sizing: border-box;
+	padding: 10rpx;
+	border-radius: 10rpx;
+	border: 4rpx dotted #DC4E42;
+	margin: 10rpx auto;
+}

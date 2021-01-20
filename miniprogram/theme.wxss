@@ -1,0 +1,38 @@
+
+/* theme 全局样式 */
+/* 目前实现white主题， 后期功能完善后支持dark主题 */
+
+/* 布局背景色 */
+.layout{
+    background: #F0F2F6;
+}
+
+/*3D卡片样式*/
+
+.quasiphysical-wind-card{
+    box-shadow: 18rpx 18rpx 30rpx rgba(0,0,0,0.1), -18rpx -18rpx 30rpx rgba(255,255,255, 1);
+    border-radius: 20rpx;
+    transition: box-shadow .2s ease-out;
+    background: #F0F2F6;
+}
+
+.quasiphysical-wind-card.concave{
+    box-shadow: 0 0 0 rgba(0,0,0,0.1), 
+     0 0 0 rgba(255,255,255,1),
+     inset 18px 18px 30px rgba(0,0,0,0.1),
+     inset -18px -18px 30px rgba(255,255,255,1);
+     transition: box-shadow .2s ease-in;
+}
+
+/*文本颜色*/
+.main-text{
+    color: #465773;
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.sub-text{
+    color: #9DA9B5;
+    font-size: 22rpx;
+    font-weight: 300;
+}
