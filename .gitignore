@@ -1,4 +1,10 @@
+# 前端
 /miniprogram/node_modules
 /miniprogram/config/config.release.js
-
+# 服务端
+server/node_modules
+server/uploads
+server/config/config.prod.js
+server/wechat/ac.txt
+# 操作系统
 .DS_Store

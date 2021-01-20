@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=DEV nodemon --inspect index.js",
+    "prod": "NODE_ENV=PROD node index.js"
+  },
+  "author": "HellyW",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.4",
+    "multer": "^1.4.2",
+    "request": "^2.88.2",
+    "underscore": "^1.12.0",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
