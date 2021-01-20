@@ -6,6 +6,13 @@
 
 it is not a completely open source project. It allows individuals to download for learning, communication and personal deployment. not be used for commercial purposes, registered trademarks and patent applications. Fork and modification are allowed. Applications derived from this project must be open source.
 
+- [ ✔️ ] fork、star、push
+- [ ✔️ ] 自建服务，发布体验版本的小程序，并允许少量用户使用（≤50人）
+- [ ✔️ ] 借鉴项目，二次开发并开源
+- [ ❌ ] 出售代码等所有获利行为
+- [ ❌ ] 拷贝代码并发布线上版本
+- [ ❌ ] 其它商业目的、注册商标、专利申请
+
 <hr />
 
 ## Hacker密码
