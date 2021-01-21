@@ -17,6 +17,9 @@ Page({
     },{
       name: 'image-cropper',
       describe: 'https://github.com/wx-plugin/image-cropper'
+    },{
+      name: 'iconfont',
+      describe: 'https://www.iconfont.cn'
     }]
   },
 

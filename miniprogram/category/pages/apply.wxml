@@ -17,8 +17,8 @@
   >
     <network-image src="{{smartIcon}}"></network-image>
     <view class="buttons">
-      <h-button class="button" icon="close" bindtap="closeSmartIconMask">放弃</h-button>
-      <h-button class="button" icon="save" bindtap="useSmartIcon">使用</h-button>
+      <h-button class="button" icon="close" bindtap="closeSmartIconMask">丢弃</h-button>
+      <h-button class="button" icon="save" bindtap="useSmartIcon">选用</h-button>
     </view>
   </half-dialog>
 </layout>
