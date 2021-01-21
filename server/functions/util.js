@@ -1,4 +1,5 @@
 const uuid = require('uuid')
+const request = require('request')
 
 const util = {}
 
@@ -28,6 +29,38 @@ util.base64Decode = str => {
 
 util.isObjectId = id => {
 	return objectIdRegx.test(id)
+}
+
+
+util.downloadImage = url => {
+	return new Promise((resolve, reject) => {
+		try{
+			const filePath = path.join(__dirname, '../uploads/download/')
+			let filename = `${util.getRandomStr(32)}.jpeg`
+			if (!fs.existsSync(filePath)) fs.mkdirSync(filePath) 
+			let writeStream = fs.createWriteStream(path.join(__dirname, filePath, filename))
+			const readStream =  request({
+				uri: url,
+				method: 'GET'
+			}) 
+			// 将图片进行存储
+			readStream.pipe(writeStream)
+            readStream.on('end', function() {
+                // 文件下载成功
+            })
+            readStream.on('error', function(err) {
+                reject(err)
+            })
+            writeStream.on("finish", function() {
+                // 文件写入成功
+                writeStream.end()
+                resolve(`${filePath}${filename}`)
+            })
+		}catch(error){
+			reject(error)
+		}
+	})
+
 }
 
 module.exports = util
