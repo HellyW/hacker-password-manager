@@ -4,6 +4,7 @@
 # 服务端
 server/node_modules
 server/uploads
+server/test.js
 server/config/config.prod.js
 server/wechat/ac.txt
 # 操作系统

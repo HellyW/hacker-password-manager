@@ -1,7 +1,10 @@
 // category.js
 const router = require('express').Router()
 const util = require('../functions/util')
+const appleAppStore = require('../functions/appleAppStore')
 const model = require('../model')
+
+const appStore = new appleAppStore()
 
 router.post('/', async (req, res, next) => {
 	try{
@@ -66,6 +69,21 @@ router.get('/', async (req, res, next) => {
 	        }
 	      })
 	    })
+	}catch(error){
+		next(error)
+	}
+})
+
+router.get('/smart_icon', async (req, res, next) => {
+	try {
+		if(!req.operator) throw "NO_AUTH"
+		if(!req.query.name) throw "请输入类型名称"
+		const iconUrl = await appStore.getAppIconUrl(req.query.name)
+		if(!iconUrl) throw "未能获取图标"
+		const localPath = await util.downloadImage(iconUrl)
+		next({
+			path: localPath.replace("../uploads", 'upload')
+		})
 	}catch(error){
 		next(error)
 	}
