@@ -1,6 +1,6 @@
 // appleAppStore.js
 // 苹果市场应用
-
+const request = require('request')
 class appleAppStore {
 	// 获取app详情
 	getAppInfo(name){

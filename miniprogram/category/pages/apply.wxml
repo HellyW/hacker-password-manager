@@ -3,11 +3,24 @@
 <layout title="申请类型">
   <form class="apply-form" bindsubmit="applyCategory">
     <!-- 基础信息 -->
-    <h-input class="input" label="logo" name="icon" describe="请上传简洁、清晰、主题明确的透明背景~~" type="upload"></h-input>
-    <h-input class="input" label="名称" name="name" describe="如 微信、新浪微博、邮箱、QQ等"></h-input>
+    <h-input class="input" label="logo" name="icon" describe="请上传简洁、清晰、主题明确的透明背景~~" value="{{logo}}" type="upload"></h-input>
+    <h-input class="input" label="名称" name="name" describe="如 微信、新浪微博、邮箱、QQ等" bindblur="getSmartIcon"></h-input>
     <h-input class="input" label="网址" name="website" describe="如 www.sina.com.cn"></h-input>
     <h-button class="button" icon="save" form-type="submit">提交</h-button>
   </form>
+
+  <half-dialog
+    wx:if="{{smartIconMask}}"
+    title="智能匹配"
+    describe="已为您智能匹配到一张logo"
+    bindclose="closeSmartIconMask"
+  >
+    <network-image src="{{smartIcon}}"></network-image>
+    <view class="buttons">
+      <h-button class="button" icon="close" bindtap="closeSmartIconMask">放弃</h-button>
+      <h-button class="button" icon="save" bindtap="useSmartIcon">使用</h-button>
+    </view>
+  </half-dialog>
 </layout>
 
 

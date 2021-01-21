@@ -55,6 +55,9 @@ Component({
   methods: {
     keyBoardListen(){
       let self = this
+      // 隐藏键盘
+      wx.hideKeyboard({})
+      // 监控键盘
       wx.onKeyboardHeightChange(res => {
         self.setData({
           bottom: res.height + 20

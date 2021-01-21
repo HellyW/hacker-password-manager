@@ -36,7 +36,6 @@ Component({
    */
   data: {
     originalImage: null,
-    cutImage: null,
     screenWidth: wx.getSystemInfoSync().screenWidth
   },
 
@@ -50,6 +49,9 @@ Component({
       })
       this.triggerEvent('input', detail)
     },
+    blurEvent({ detail }){
+      this.triggerEvent('blur', detail)
+    },
     finCut(){
       let self = this
       this.selectComponent("#image-cropper").getImg(( {url} )=>{
@@ -58,16 +60,20 @@ Component({
     },
     async uploadImage(url){
       try{
+        wx.showLoading({
+          title: '上传中',
+        })
         const ret = await app.$api.category.uploadIcon(url)
+        wx.hideLoading({})
         this.setData({
           value: ret.path,
-          cutImage: url,
           originalImage: null
         })
         this.triggerEvent('input', {
           value: ret.path
         })
       }catch(error){
+        wx.hideLoading({})
         app.$toast(error)
         console.log(error)
       }

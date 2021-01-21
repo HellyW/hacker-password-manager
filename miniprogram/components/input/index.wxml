@@ -3,7 +3,8 @@
 	<h-text wx:if="{{label}}" type="main" class="label">{{label}}</h-text>
 	<h-text wx:if="{{describe}}" type="sub" class="describe">{{describe}}</h-text>
 	<view wx:if="{{type === 'upload'}}" class="upload quasiphysical-wind-card">
-		<image src="{{value ? cutImage : './sources/upload.png'}}" bind:tap="loadLocalImage"></image>
+		<network-image wx:if="{{value}}" class="image" src="{{value}}" preview="{{false}}"  bind:tap="loadLocalImage"></network-image>
+		<image  wx:else class="image" src="./sources/upload.png" bind:tap="loadLocalImage"></image>
 	</view>
 	<input
 		class="quasiphysical-wind-card {{disabled ? '' : 'concave'}} {{type === 'upload' ? 'hidden' : ''}}"
@@ -15,6 +16,7 @@
 		name="{{name}}"
 		maxlength="{{maxlength}}"
 		bindinput="inputEvent"
+		bindblur="blurEvent"
 	></input>
 </view>
 

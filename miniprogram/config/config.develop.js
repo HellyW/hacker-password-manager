@@ -1,6 +1,5 @@
 // const HOST = "http://127.0.0.1:8080"
-const HOST = "http://192.168.0.139:8080"
-// const HOST = "http://192.168.3.78:8080"
+const HOST = "http://192.168.3.77:8080"
 module.exports = {
   HOST: HOST,
   API_PATH: `${HOST}/api`,

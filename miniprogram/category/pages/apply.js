@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    smartIconMask: false,
+    logo: null,
+    smartIcon: null
   },
 
   /**
@@ -35,6 +37,36 @@ Page({
       console.log(error)
       app.$toast(error)
     }
+  },
+  async getSmartIcon({ detail }){
+    try{
+      const name = detail.value
+      wx.showLoading({
+        title: '智能匹配'
+      })
+      const { path } = await app.$api.category.getSmartIcon(name)
+      wx.hideLoading({})
+      this.setData({
+        smartIconMask: !!path,
+        smartIcon: path
+      })
+    }catch(error){
+      wx.hideLoading({})
+      console.log(error)
+    }
+  },
+
+  closeSmartIconMask(){
+    this.setData({
+      smartIconMask: false
+    })
+  },
+
+  useSmartIcon(){
+    this.setData({
+      smartIconMask: false,
+      logo: this.data.smartIcon
+    })
   },
 
   /**

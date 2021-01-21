@@ -45,5 +45,18 @@ export const category = {
         reject(error)
       }
     })
+  },
+  getSmartIcon(name){
+    return new Promise(async (resolve, reject) =>{
+      try {
+        if(!name) throw 'name is null'
+        const ret = await ajax.get('/category/smart_icon', {
+          name: name
+        })
+        resolve(ret)
+      } catch (error) {
+        reject(error)
+      }
+    })
   }
 }
