@@ -2,22 +2,27 @@
 <view class="com-input quasiphysical-wind-card">
 	<h-text wx:if="{{label}}" type="main" class="label">{{label}}</h-text>
 	<h-text wx:if="{{describe}}" type="sub" class="describe">{{describe}}</h-text>
-	<view wx:if="{{type === 'upload'}}" class="upload quasiphysical-wind-card">
-		<network-image wx:if="{{value}}" class="image" src="{{value}}" preview="{{false}}"  bind:tap="loadLocalImage"></network-image>
-		<image  wx:else class="image" src="./sources/upload.png" bind:tap="loadLocalImage"></image>
+	<view wx:if="{{type === 'switch'}}" class="switch-container">
+		<switch checked="{{value}}" color="#F0F2F6" bindchange="changeEvent"/>
 	</view>
-	<input
-		class="quasiphysical-wind-card {{disabled ? '' : 'concave'}} {{type === 'upload' ? 'hidden' : ''}}"
-		placeholder="{{placeholder}}"
-		type="{{type}}"
-		adjust-position="{{adjustPosition}}"
-		disabled="{{disabled}}"
-		value="{{value}}"
-		name="{{name}}"
-		maxlength="{{maxlength}}"
-		bindinput="inputEvent"
-		bindblur="blurEvent"
-	></input>
+	<view wx:else>
+		<view wx:if="{{type === 'upload'}}" class="upload quasiphysical-wind-card">
+			<network-image wx:if="{{value}}" class="image" src="{{value}}" preview="{{false}}"  bind:tap="loadLocalImage"></network-image>
+			<image  wx:else class="image" src="./sources/upload.png" bind:tap="loadLocalImage"></image>
+		</view>
+		<input
+			class="quasiphysical-wind-card {{disabled ? '' : 'concave'}} {{type === 'upload' ? 'hidden' : ''}}"
+			placeholder="{{placeholder}}"
+			type="{{type}}"
+			adjust-position="{{adjustPosition}}"
+			disabled="{{disabled}}"
+			value="{{value}}"
+			name="{{name}}"
+			maxlength="{{maxlength}}"
+			bindinput="inputEvent"
+			bindblur="blurEvent"
+		></input>
+	</view>
 </view>
 
 <image-cropper wx:if="{{type === 'upload' && originalImage}}" id="image-cropper" imgSrc="{{originalImage}}" max_width="800" max_height="800" img_width="{{screenWidth}}" disable_ratio="{{true}}"></image-cropper>

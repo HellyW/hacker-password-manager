@@ -33,7 +33,7 @@ const schema = mongoose.Schema({
 
 schema.pre('save', function(next) {
   this.createAt = Date.now()
-  this.expired = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000) 
+  if(!this.expired) this.expired = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000) 
   next()
 })
 

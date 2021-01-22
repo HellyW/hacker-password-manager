@@ -52,6 +52,12 @@ Component({
     blurEvent({ detail }){
       this.triggerEvent('blur', detail)
     },
+    changeEvent({ detail }){
+      this.setData({
+        value: detail.value
+      })
+      this.triggerEvent('change', detail)
+    },
     finCut(){
       let self = this
       this.selectComponent("#image-cropper").getImg(( {url} )=>{

@@ -26,7 +26,8 @@ router.post('/', async (req, res, next) => {
 		if(!req.operator) throw "NO_AUTH"
 		const {
 			name,
-			encryptStr
+			encryptStr,
+			isTemp
 		} = req.body
 		if(!name) throw '您必须指定一个别名'
 		if(!encryptStr) throw '您必须指定需要分享的信息'
@@ -37,17 +38,20 @@ router.post('/', async (req, res, next) => {
 			if(typeof error === 'string' && error.indexOf("risky content") !== -1) throw '存在违禁词汇，已被腾讯拦截'
 		}
 		const {
-			_id: id
+			_id: id,
+			expired
 		} = await new model.SHARE({
 			name,
 			encryptStr,
+			expired: new Date(new Date().getTime() + ( (true || isTemp) ? 7 : 20 * 365 ) * 24 * 60 * 60 * 1000),
 			owner: req.operator._id
 		}).save()
 		const path = await wechat.getWXAcodeUnlimit('account/pages/share', id)
 		// 需要根据这个id 生成一个小程序码
 		// 由前端生成一张分享海报
 		next({
-			path: path.replace("../uploads", 'upload')
+			path: path.replace("../uploads", 'upload'),
+			expired
 		})
 	}catch(error){
 		next(error)

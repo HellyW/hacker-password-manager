@@ -1,7 +1,7 @@
 import { formatDate } from '../../magics/util'
 const CONFIG = require("../../config/index")
 
-export const getTemplate = (name, code, codeImg) => {
+export const getTemplate = (name, code, codeImg, expired) => {
 	return {
       background: '#465773',
       width: '500rpx',
@@ -101,7 +101,7 @@ export const getTemplate = (name, code, codeImg) => {
         },
         {
           type: 'text',
-          text: `该分享7天内有效，请于${formatDate(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000))}前查阅！`,
+          text: `该分享7天内有效，请于${formatDate(expired)}前查阅！`,
           css: {
             top: '665rpx',
             left: '250rpx',

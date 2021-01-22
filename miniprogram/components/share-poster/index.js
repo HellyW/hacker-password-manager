@@ -100,13 +100,14 @@ Component({
         const aes = new AES(CONFIG.share_key_plain, formData.code)
         const encryptStr = aes.encrypt(this.data.decodeStr)
         // code 用作本地加密和解密，不上传至服务端
-        const { path } = await app.$api.share.createShare({
+        const { path, expired } = await app.$api.share.createShare({
           name: formData.name,
-          encryptStr
+          encryptStr,
+          isTemp: formData.isTemp
         })
         this.setData({
           formMask: false,
-          paletteData: getTemplate(formData.name, formData.code, `${CONFIG.HOST}/${path}`)
+          paletteData: getTemplate(formData.name, formData.code, `${CONFIG.HOST}/${path}`, expired)
         })
       }catch(error){
         this.triggerEvent('error', error)

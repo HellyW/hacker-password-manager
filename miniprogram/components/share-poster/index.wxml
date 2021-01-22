@@ -7,6 +7,8 @@
   <form wx:if="{{formMask}}" bindsubmit="createPoster">
     <h-input class="input" label="别名" name="name" type="text" describe="用于帮助您标记分享的内容" placeholder="如：茶歇区WI-FI账号密码" adjust-position="{{false}}"></h-input>
     <h-input class="input" label="访问码" name="code" type="number" describe="只有输入正确的访问码，才可以查看密码信息" placeholder="6位纯数字" maxlength="6" adjust-position="{{false}}"></h-input>
+    <!-- 增加一个switch的控件 -->
+    <h-input class="input" label="短期有效" name="isTemp" type="switch" describe="默认有效期为7天。关闭后生成较长有效期的海报"></h-input>
     <h-button class="input" icon="share" form-type="submit">创建分享海报</h-button>
   </form>
   <view wx:else class="poster-cocntainer">

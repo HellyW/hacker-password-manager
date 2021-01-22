@@ -50,3 +50,9 @@ input.hidden{
 	bottom: 30rpx;
 	z-index: 9;
 }
+
+
+.switch-container{
+	text-align: center;
+	padding: 20rpx 0;
+}
