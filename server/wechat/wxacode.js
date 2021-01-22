@@ -25,7 +25,7 @@ const getWXAcodeUnlimit = (pagePath, scene='') => {
 				method: 'POST',
 				json: true,
 				body: {
-					page: pagePath,
+					path: pagePath,
 					scene: scene
 				}
 			})
