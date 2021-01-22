@@ -2,13 +2,33 @@
 const app = getApp()
 Component({
   behaviors: ['wx://form-field', 'wx://form-field-group'],
+       /**
+   * 组件的生命周期
+   */
+  lifetimes: {
+    attached: function() {
+      // 在组件实例进入页面节点树时执行
+      this.initComponent()
+    },
+    detached: function() {
+      // 在组件实例被从页面节点树移除时执行
+    },
+  },
+  // 以下是旧式的定义方式，可以保持对 <2.2.3 版本基础库的兼容
+  attached: function() {
+    // 在组件实例进入页面节点树时执行
+    this.initComponent()
+  },
+  detached: function() {
+    // 在组件实例被从页面节点树移除时执行
+  },
   /**
    * 组件的属性列表
    */
   
   properties: {
     name: String,
-    value: String,
+    value: String || Boolean,
     maxlength: Number,
     label: {
       type: String,
@@ -35,6 +55,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    switchValue: false,
     originalImage: null,
     screenWidth: wx.getSystemInfoSync().screenWidth
   },
@@ -43,6 +64,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    initComponent(){
+      this.setData({
+        switchValue: this.data.value
+      })
+    },
     inputEvent({ detail }){
       this.setData({
         value: detail.value
@@ -52,7 +78,7 @@ Component({
     blurEvent({ detail }){
       this.triggerEvent('blur', detail)
     },
-    changeEvent({ detail }){
+    switchChangeEvent({ detail }){
       this.setData({
         value: detail.value
       })

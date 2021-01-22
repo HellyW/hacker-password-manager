@@ -93,6 +93,7 @@ Component({
       try{
         if(!this.data.decodeStr) throw '分享失败，缺少必要参数'
         const formData = detail.value || {}
+        
         if(!formData.name) throw '请输入别名'
         if(!formData.code) throw '您必须输入访问码'
         const codeRegx = /^\d{6}$/
@@ -100,6 +101,7 @@ Component({
         const aes = new AES(CONFIG.share_key_plain, formData.code)
         const encryptStr = aes.encrypt(this.data.decodeStr)
         // code 用作本地加密和解密，不上传至服务端
+        formData.isTemp = Boolean((formData.isTemp || "true").toString() === "true")
         const { path, expired } = await app.$api.share.createShare({
           name: formData.name,
           encryptStr,

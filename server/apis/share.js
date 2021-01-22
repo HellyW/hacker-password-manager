@@ -43,7 +43,7 @@ router.post('/', async (req, res, next) => {
 		} = await new model.SHARE({
 			name,
 			encryptStr,
-			expired: new Date(new Date().getTime() + ( (true || isTemp) ? 7 : 20 * 365 ) * 24 * 60 * 60 * 1000),
+			expired: new Date(new Date().getTime() + ( !!isTemp ? 7 : 20 * 365 ) * 24 * 60 * 60 * 1000),
 			owner: req.operator._id
 		}).save()
 		const path = await wechat.getWXAcodeUnlimit('account/pages/share', id)

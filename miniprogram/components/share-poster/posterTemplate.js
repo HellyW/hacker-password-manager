@@ -101,7 +101,7 @@ export const getTemplate = (name, code, codeImg, expired) => {
         },
         {
           type: 'text',
-          text: `该分享7天内有效，请于${formatDate(expired)}前查阅！`,
+          text: expired ? `该分享将于${formatDate(expired)}过期，请及时查阅！` :  "如已失效，请联系分享者" ,
           css: {
             top: '665rpx',
             left: '250rpx',
