@@ -25,6 +25,12 @@ Hacker密码更多的是一次尝试和实践，旨在用一种新的形式来�
 
 <img src="docs/encryptionProcess.png" width="100%">
 
+<br />
+
+`科普小剧场`
+
+<img src="docs/exampleStory.png" width="100%">
+
 ## 体验
 
 <img src="screenshots/gh_72a49c29672c_1280.jpg" width="200px" height="200px" />
