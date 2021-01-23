@@ -1,13 +1,5 @@
-## 协议声明
 
-这不是一个完全开源的项目。它允许个人下载用于学习、交流和个人部署使用，不可用于商业目的、注册商标、专利申请。允许fork代码和修改，基于此项目衍生的应用必须开源。
-
-## License
-
-it is not a completely open source project. It allows individuals to download for learning, communication and personal deployment. not be used for commercial purposes, registered trademarks and patent applications. Fork and modification are allowed. Applications derived from this project must be open source.
-
-<hr />
-
+## 开源协议补充说明：
 
 * [ ✔️ ] fork、star、push
 * [ ✔️ ] 自建服务，发布体验版本的小程序，并允许少量用户使用（≤50人）
