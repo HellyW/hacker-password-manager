@@ -2,5 +2,6 @@
 module.exports = {
 	...require('./auth'),
 	...require('./wxacode'),
-	...require('./secCheck')
+	...require('./secCheck'),
+  ...require('./trialfn')
 }

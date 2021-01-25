@@ -19,5 +19,10 @@ module.exports = {
 	secCheck: {
 		imageCheck: getFullPath("/img_sec_check", "/wxa"),
 		stringCheck: getFullPath("/msg_sec_check", "/wxa"),
+	},
+	trialfn: {
+		bindTester: getFullPath("/bind_tester", "/wxa"),
+		unbindTester: getFullPath("/unbind_tester", "/wxa"),
+		getTrialQRcode: getFullPath("/get_qrcode", "/wxa"),
 	}
 }
